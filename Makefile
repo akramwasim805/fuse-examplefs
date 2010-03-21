@@ -16,7 +16,7 @@ bin/examplefs: bin obj/examplefs.o obj/wrap.o obj/main.o
 obj:
 	mkdir -p obj
 
-obj/examplefs.o: obj examplefs.cc examplefs.hh
+obj/examplefs.o: obj examplefs.cc wrap.hh
 	g++ -g $(CFLAGS) -c examplefs.cc -o obj/examplefs.o
 
 obj/main.o: obj main.c examplefs.hh

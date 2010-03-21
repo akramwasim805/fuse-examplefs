@@ -47,6 +47,7 @@ int main(int argc, char *argv[]) {
 		}
 	}
 
+	//realpath(...) returns the canonicalized absolute pathname
 	set_rootdir(realpath(argv[i], NULL));
 
 	for(; i < argc; i++) {
